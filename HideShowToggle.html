@@ -17,14 +17,25 @@
     <h1>Hide and Show Jquery Example</h1>
     <button id="btnHide">Hide</button>
     <button id="btnShow">Show</button>
+    <button id="btnToggle">Toggle</button>
+
     <script>
         $(document).ready(function() {
             $('#btnHide').click(function() {
-                $('h1').hide();
+                $('h1').hide(500);
             });
             $('#btnShow').click(function() {
-                $('h1').show();
+                $('h1').show(500);
             });
+            $('#btnToggle').click(function() {
+                $('h1').toggle(500);
+            }); //點toggle可以收放
+            $('h1').click(function() {
+                $(this).toggle(500);
+            }); //點標題可以收放
+            $('h1').mouseover(function() {
+                $(this).css('cursor', 'pointer');
+            }); //滑鼠變成手
         });
     </script>
 
